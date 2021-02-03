@@ -1,9 +1,8 @@
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
 
-from .views import import_create, import_update
+from .views import CreateImports
 
 urlpatterns = [
-    path('imports', import_create, name='citizen_create'),
-    path('imports/<int:import_id>/citizens/<int:citizen_id>', import_update, name='citizen_update'),
-    #path('imports/<int:inpoer_id>/citizens'),
+    path('imports', CreateImports.as_view(), name='citizen_create'),
 ]

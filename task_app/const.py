@@ -1,6 +1,3 @@
-DATE_FORMAT = '%Y-%m-%d'
-
-
 class Gender:
     male = 'male'
     female = 'female'

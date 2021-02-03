@@ -25,7 +25,7 @@ SECRET_KEY = '65p%cdhalq6=e$0yi+&hy4aq3uji4n=v(lg*z!-_t6&a1!2q0g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'task_app.apps.TaskAppConfig',
 ]
 
@@ -100,6 +101,21 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DATE_INPUT_FORMATS': ["%d.%m.%Y"],
+    'DATE_FORMAT': "%d.%m.%Y",
+    # 'DEFAULT_RENDERER_CLASSES': (
+    #     'rest_framework.renderers.JSONRenderer',
+    # ),
+    'DEFAULT_PARSER_CLASSES': (
+            'rest_framework.parsers.JSONParser',
+            'rest_framework.parsers.FormParser',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
+    ),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

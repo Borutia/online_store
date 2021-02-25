@@ -16,7 +16,7 @@
     3. sudo -u postgres psql postgres
         a. \password postgres
         b. Ввод пароля: secret
-        c. Создал пользователя online_store
+        c. Создание пользователя online_store
             create user online_store with password 'secret';
             alter role online_store set client_encoding to 'utf8';
             alter role online_store set default_transaction_isolation to 'read committed';

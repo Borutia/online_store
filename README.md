@@ -14,10 +14,9 @@
     1. sudo apt-get install postgresql
     2. sudo apt-get install postgresql-server-dev-all
     3. sudo -u postgres psql postgres
-        a. \password postgres
-        b. Пароль: secret
+        a. Установка пароля для пользователя postgres ```\password postgres```
+        b. Ввод пароля: ```secret```
         c. Создал пользователя online_store
-            ```sql
             create user online_store with password 'secret';
             alter role online_store set client_encoding to 'utf8';
             alter role online_store set default_transaction_isolation to 'read committed';
@@ -30,7 +29,7 @@
     3. git clone git@github.com:Borutia/online_store.git
     Проект теперь находится в ~/project/online_store
 ### Установка virtualenv
-    1. sudo apt-get install python3-venv
+    1. sudo apt-get install virtualenv
     2. python3 -m venv venv
     3. Из папки проекта  source ./venv/bin/activate
     4. pip3 install -r requirements.txt

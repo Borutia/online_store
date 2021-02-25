@@ -33,7 +33,7 @@
     1. sudo apt-get install python3
     2. sudo apt-get install python3-venv
     3. python3 -m venv venv
-    4. Из папки проекта source ./venv/bin/activate
+    4. Из папки проекта: source ./venv/bin/activate
     5. pip install -r requirements.txt
 ### Настройка проекта 
     1. python manage.py makemigrations
@@ -42,5 +42,7 @@
     1. pip install gunicorn   
     2. gunicorn -b :8080 online_store.wsgi 
 ### Запуск тестов
-    1. Самописные тесты вызаваются командой: python manage.py test
-    2. Ручное тестировать можно проводить с помощью Postman
+    1. sudo -u postgres psql postgres
+    2. ALTER USER online_store CREATEDB;
+    3. Самописные тесты запускаются командой: python manage.py test
+    4. Ручное тестировать можно проводить с помощью Postman

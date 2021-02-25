@@ -29,7 +29,7 @@
     3. git clone https://github.com/Borutia/online_store.git
     Проект теперь находится в ~/project/online_store
     4. cd online_store/
-### Установка python и virtualenv
+### Установка python и venv
     1. sudo apt-get install python3
     2. sudo apt-get install python3-venv
     3. python3 -m venv venv
